@@ -1,8 +1,3 @@
-;(require 'org)
-;
-;(global-set-key (kbd "C-c l") 'org-store-link)
-;(global-set-key (kbd "C-c a") 'org-agenda)
-;(global-set-key (kbd "C-c c") 'org-capture)
 
 (use-package org
   :commands (org-mode org-agenda org-store-link org-capture)
