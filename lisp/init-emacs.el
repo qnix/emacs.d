@@ -84,4 +84,9 @@
 (use-package swiper
   :bind (("C-s" . swiper)))
 
+(use-package which-key
+    :diminish which-key-mode
+    :config
+    (add-hook 'after-init-hook 'which-key-mode))
+
 (provide 'init-emacs)

@@ -32,6 +32,23 @@
 
 (require 'evil)
 (evil-mode 1)
+(use-package undo-tree
+  :diminish undo-tree-mode:
+  :config
+  (global-undo-tree-mode 1))
+
+(use-package avy
+  :bind (("C-c [" . avy-goto-char)
+         ("C-c ]" . avy-goto-line))
+  :config
+  (avy-setup-default)
+  (global-set-key (kbd "C-c C-j") 'avy-resume))
+
+(use-package ace-window
+  :bind ("M-o" . ace-window)
+  :config
+  ;; they key order favor the right hand fingers
+  (setq aw-keys '(?h ?j ?k ?l ?i ?o ?a ?s ?d ?f ?g)))
 
 (use-package yasnippet
   :init

@@ -83,3 +83,6 @@
 (depends-on "aggressive-indent")
 (depends-on "smart-dash")
 (depends-on "google-this")
+(depends-on "which-key")
+(depends-on "avy")
+(depends-on "ace-window")
