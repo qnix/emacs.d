@@ -24,7 +24,6 @@
 (depends-on "org")
 (depends-on "deft")
 
-
 (depends-on "evil")
 (depends-on "evil-magit")
 (depends-on "evil-surround")
@@ -52,6 +51,8 @@
 (depends-on "auto-complete-chunk")
 (depends-on "auto-complete-c-headers")
 (depends-on "auto-complete-auctex")
+
+(depends-on "ess")
 
 (depends-on "json-mode")
 (depends-on "json-reformat")

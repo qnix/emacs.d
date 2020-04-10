@@ -21,18 +21,25 @@
 (global-set-key (kbd "C--")     'text-scale-decrease)
 (global-set-key (kbd "C-c C-k") 'compile)
 (global-set-key (kbd "C-x C-j") 'kill-this-buffer)
+(global-set-key (kbd "C-x C-k r")
+                #'(lambda ()
+                    (interactive)
+                    (byte-recompile-directory user-emacs-directory 0 1)))
 
 (require 'init-emacs)
 
 (require 'init-python)
 
+(require 'init-org)
+
+(require 'init-magit)
+
 (require 'evil)
 (evil-mode 1)
-
-(require 'init-org)
 
 (require 'yasnippet)
 (add-to-list 'yas-snippet-dirs "/Users/qta/snippets")
 (yas-global-mode 1)
 
-(require 'init-magit)
+(use-package ess
+  :init (require 'ess-site))

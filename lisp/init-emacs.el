@@ -38,8 +38,8 @@
 		"/usr/bin/find /usr/local/Cellar/cask -name cask.el"))))
 (cask-initialize)
 
-(eval-when-compile
-  (require 'use-package))
+(require 'use-package)
+(require 'bind-key)
 
 (require 'exec-path-from-shell)
 (setq exec-path-from-shell-check-startup-files nil)
