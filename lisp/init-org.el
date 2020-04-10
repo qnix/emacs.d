@@ -9,9 +9,10 @@
   :commands deft
   :bind ("C-c C-8" . deft)
   :init (setq deft-directory "/Users/qta/org/deft/"
-              deft-archive-directory "/Users/qta/org/deft/archive/"
+              deft-archive-directory "/Users/qta/org/deft.archive/"
               deft-text-mode 'org-mode
-              deft-extensions '("org")
+              deft-extensions '("org" "txt" "text" "md" "markdown" "tex")
+              deft-default-extension "org"
               deft-recursive t
               deft-org-mode-title-prefix t))
 
