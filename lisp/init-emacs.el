@@ -28,9 +28,11 @@
       visible-bell t)
 
 (show-paren-mode t)
+(line-number-mode)
+(column-number-mode)
 
 ; when C-l to recenter window, prefer bottom first, then middle
-(setq recenter-positions '(bottom middle top))
+(setq recenter-positions '(bottom top middle))
 
 (require 'cask 
 	 (car (split-string
