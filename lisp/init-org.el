@@ -16,7 +16,8 @@
 
 (use-package deft
   :commands deft
-  :bind ("C-c C-8" . deft)
+  :bind (("C-c C-8" . deft)
+         ("<f8>" . deft))
   :init (setq deft-directory "/Users/qta/org/deft/"
               deft-archive-directory "/Users/qta/org/deft.archive/"
               deft-text-mode 'org-mode

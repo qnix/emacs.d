@@ -21,6 +21,8 @@
 (global-set-key (kbd "C--")     'text-scale-decrease)
 (global-set-key (kbd "C-c C-k") 'compile)
 (global-set-key (kbd "C-x C-j") 'kill-this-buffer)
+(global-set-key (kbd "C-x m")   'execute-extended-command)
+(global-set-key (kbd "C-x C-m") 'execute-extended-command)
 
 (global-set-key (kbd "C-x C-k r")
                 #'(lambda ()
@@ -41,7 +43,6 @@
 (use-package yasnippet
   :init
   (add-to-list 'yas-snippet-dirs (expand-file-name "~/snippets"))
-  :config
   (yas-global-mode 1))
   
 (use-package ess
