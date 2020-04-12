@@ -3,7 +3,16 @@
   :commands (org-mode org-agenda org-store-link org-capture)
   :bind (("C-c a" . org-agenda)
          ("C-c l" . org-store-link)
-         ("C-c c" . org-capture)))
+         ("C-c c" . org-capture))
+  :init
+  (setq org-startup-with-inline-images t)
+  (setq org-src-window-setup 'other-frame)
+  (setq org-src-preserve-indentation t)
+  :config
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((python . t)))
+  (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images))
 
 (use-package deft
   :commands deft
