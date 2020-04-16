@@ -63,3 +63,21 @@
 (depends-on "js2-closure")
 
 (depends-on "lua-mode")
+
+(depends-on "rust-mode")
+(depends-on "flycheck-rust")
+(depends-on "cargo")
+(depends-on "company")
+(depends-on "company-racer")
+(depends-on "racer")
+
+(depends-on "clojure-mode")
+(depends-on "inf-clojure")
+(depends-on "cider")
+
+(depends-on "swiper")
+(depends-on "ivy")
+
+(depends-on "chess")
+(depends-on "ace-jump-mode")
+(depends-on "aggressive-indent")

@@ -1,4 +1,8 @@
 
+(defvar qnix/frame-alist '((font . "Monaco-15")
+                           (top . 2) (left . 2)
+                           (width . 94) (height . 44)))
+
 (setq inhibit-splash-screen t
       initial-scratch-message nil
       delete-selection-mode t
@@ -11,6 +15,9 @@
 ;; (setq-default display-buffer-reuse-frames t)
 (add-to-list 'display-buffer-alist
              '("." nil (reusable-frames . t)))
+
+(setq initial-frame-alist qnix/frame-alist)
+(setq default-frame-alist qnix/frame-alist)
 
 (setq-default indicate-empty-lines t)
 (when (not indicate-empty-lines)
@@ -48,5 +55,28 @@
 (exec-path-from-shell-initialize)
 
 (require 'better-defaults)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Swiper Ivy-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Use ivy-mode to replace icomplete and ido (both bundled with emacs)
+;; (require 'icomplete)
+;; (require 'ido)
+
+;; Provide better search and complete feature in the minibuffer
+(use-package ivy
+  :bind (("C-x b" . ivy-switch-buffer)
+         ("C-c C-r" . ivy-resume))
+  :diminish (ivy-mode)
+  :init
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-count-format "(%d/%d) ")
+  (setq enable-recursive-minibuffers t)
+  :config
+  (ivy-mode 1))
+
+(use-package swiper
+  :bind (("C-s" . swiper)))
 
 (provide 'init-emacs)

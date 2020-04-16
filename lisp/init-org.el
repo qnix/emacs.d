@@ -1,3 +1,4 @@
+(add-to-list 'load-path (expand-file-name "modules" user-emacs-directory))
 
 (use-package org
   :commands (org-mode org-agenda org-store-link org-capture)
@@ -11,7 +12,11 @@
   :config
   (org-babel-do-load-languages
    'org-babel-load-languages
-   '((python . t)))
+   '((emacs-lisp . t)
+     (julia . t)
+     (python . t)
+     (shell . t)
+     (R . t)))
   (add-hook 'org-babel-after-execute-hook 'org-redisplay-inline-images))
 
 (use-package deft

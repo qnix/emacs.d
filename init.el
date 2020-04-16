@@ -7,27 +7,20 @@
 
 (add-to-list 'load-path "/Users/qta/.emacs.d/lisp")
 
-(defvar qnix/frame-alist '((font . "Monaco-15")
-                           (top . 2) (left . 2)
-                           (width . 94) (height . 44)))
+(global-unset-key (kbd "C-x C-u"))      ; unbind 'update-region
 
-(setq initial-frame-alist qnix/frame-alist)
-(setq default-frame-alist qnix/frame-alist)
-
-(global-set-key (kbd "RET")     'newline-and-indent)
 (global-set-key (kbd "C-;")     'comment-or-uncomment-region)
 (global-set-key (kbd "M-/")     'hippie-expand)
 (global-set-key (kbd "C-+")     'text-scale-increase)
 (global-set-key (kbd "C--")     'text-scale-decrease)
-(global-set-key (kbd "C-c C-k") 'compile)
-(global-set-key (kbd "C-x C-j") 'kill-this-buffer)
 (global-set-key (kbd "C-x m")   'execute-extended-command)
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 
 (global-set-key (kbd "C-x C-k r")
                 #'(lambda ()
                     (interactive)
-                    (byte-recompile-directory user-emacs-directory 0 1)))
+                    (byte-recompile-directory user-emacs-directory 0 1)
+                    (load user-init-file)))
 
 (require 'init-emacs)
 
@@ -47,3 +40,9 @@
   
 (use-package ess
   :init (require 'ess-site))
+
+(require 'init-stockfish)
+
+(require 'init-clojure)
+
+
