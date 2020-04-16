@@ -1,4 +1,7 @@
-(add-to-list 'load-path (expand-file-name "modules" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "modules/ob-julia" user-emacs-directory))
+
+(setq inferior-julia-program-name "julia")
+(require 'ob-julia)
 
 (use-package org
   :commands (org-mode org-agenda org-store-link org-capture)
@@ -9,6 +12,7 @@
   (setq org-startup-with-inline-images t)
   (setq org-src-window-setup 'other-frame)
   (setq org-src-preserve-indentation t)
+  (setq org-confirm-babel-evaluate nil)
   :config
   (org-babel-do-load-languages
    'org-babel-load-languages

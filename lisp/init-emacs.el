@@ -41,7 +41,7 @@
 ; when C-l to recenter window, prefer bottom first, then middle
 (setq recenter-positions '(bottom top middle))
 
-(require 'cask 
+(require 'cask
 	 (car (split-string
 	       (shell-command-to-string
 		"/usr/bin/find /usr/local/Cellar/cask -name cask.el"))))
@@ -55,6 +55,9 @@
 (exec-path-from-shell-initialize)
 
 (require 'better-defaults)
+
+; always delete the trailing whitespaces
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

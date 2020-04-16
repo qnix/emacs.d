@@ -20,7 +20,7 @@
                 #'(lambda ()
                     (interactive)
                     (byte-recompile-directory user-emacs-directory 0 1)
-                    (load user-init-file)))
+                    (load-file user-init-file)))
 
 (require 'init-emacs)
 
@@ -37,12 +37,31 @@
   :init
   (add-to-list 'yas-snippet-dirs (expand-file-name "~/snippets"))
   (yas-global-mode 1))
-  
+
 (use-package ess
   :init (require 'ess-site))
 
 (require 'init-stockfish)
 
 (require 'init-clojure)
+
+(use-package smartparens
+  :diminish smartparens-mode
+  :config
+  (add-hook 'prog-mode-hook 'smartparens-mode))
+
+(use-package aggressive-indent)
+
+(add-hook 'prog-mode-hook 'electric-pair-mode)
+
+(use-package smart-dash
+  :config
+  (add-hook 'python-mode-hook 'smart-dash-mode))
+
+
+
+(use-package google-this
+  :config
+  (google-this-mode 1))
 
 

@@ -81,3 +81,5 @@
 (depends-on "chess")
 (depends-on "ace-jump-mode")
 (depends-on "aggressive-indent")
+(depends-on "smart-dash")
+(depends-on "google-this")
