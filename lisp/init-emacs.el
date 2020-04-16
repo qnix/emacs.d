@@ -57,7 +57,9 @@
 (require 'better-defaults)
 
 ; always delete the trailing whitespaces
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(use-package simple
+  :config
+  (add-hook 'before-save-hook 'delete-trailing-whitespace))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
