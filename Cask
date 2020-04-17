@@ -20,6 +20,7 @@
 (depends-on "use-package")
 (depends-on "web-mode")
 (depends-on "yasnippet")
+(depends-on "paredit")
 
 (depends-on "org")
 (depends-on "deft")
@@ -72,8 +73,10 @@
 (depends-on "racer")
 
 (depends-on "clojure-mode")
+(depends-on "clojure-mode-extra-font-locking")
 (depends-on "inf-clojure")
 (depends-on "cider")
+(depends-on "tagedit")
 
 (depends-on "swiper")
 (depends-on "ivy")
@@ -86,3 +89,12 @@
 (depends-on "which-key")
 (depends-on "avy")
 (depends-on "ace-window")
+(depends-on "neotree")
+(depends-on "counsel")
+
+(depends-on "dracula-theme")
+(depends-on "apropospriate-theme")
+(depends-on "panda-theme")
+
+(depends-on "powerline")
+(depends-on "feebleline")

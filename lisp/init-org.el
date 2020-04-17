@@ -33,6 +33,7 @@
               deft-extensions '("org" "txt" "text" "md" "markdown" "tex")
               deft-default-extension "org"
               deft-recursive t
-              deft-org-mode-title-prefix t))
+              deft-org-mode-title-prefix t
+              deft-auto-save-interval 60))
 
 (provide 'init-org)

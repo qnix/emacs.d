@@ -85,8 +85,45 @@
   :bind (("C-s" . swiper)))
 
 (use-package which-key
-    :diminish which-key-mode
-    :config
-    (add-hook 'after-init-hook 'which-key-mode))
+  :diminish which-key-mode
+  :config
+  (add-hook 'after-init-hook 'which-key-mode))
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Swiper Ivy-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package neotree
+  :config
+  (setq neo-smart-open t)
+  (setq neo-theme 'arrow)
+  (global-set-key (kbd "C-c t") 'neotree-toggle))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Themes
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package dracula-theme
+  :disabled
+  :config
+  (load-theme 'dracula t))
+
+(use-package apropospriate-theme
+  :disabled)
+
+(use-package panda-theme
+  ;:disabled
+  :config
+  (load-theme 'panda t))
+
+(use-package powerline
+  :disabled
+  :config
+  (setq powerline-default-separator 'utf-8))
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; The End
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (provide 'init-emacs)
